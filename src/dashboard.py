@@ -261,13 +261,3 @@ class Dashboard(ReactApp):
     def AvantesSpectrometer(self):
         pass
 
-D = Dashboard() 
-
-UtilsServer = HTTPServer(port=8085)
-
-@UtilsServer.get("/pages/sample")
-def return_sample_page():
-    return D.json()
-
-
-UtilsServer.start()
